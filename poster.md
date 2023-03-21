@@ -3,7 +3,7 @@
 
 ## 동아리 소개
 Windows, macOS, Linux 등과 같은 운영체제들을 연구하는 동아리입니다. 임시 활동 내용은 다음과 같습니다:
-- 최첨단 기술을 사용하여 안정적이고, 보안이 강하고 사용이 쉬운 운영체제를 연구/개발합니다. openSUSE ALP, Fedora Silverblue/Kinoite, NixOS, ChromeOS 등의 운영체제와 같이 Immutable하고, Container를 사용하여 보안과 안정성을 확보하는 Linux 기반 운영체제를 개발합니다. 사용할 기술들 중 일부는:
+- 최첨단 기술을 사용하여 안정적이고, 보안이 강하고 사용이 쉬운 운영체제를 연구/개발합니다. openSUSE ALP, Fedora Silverblue/Kinoite, NixOS, ChromeOS 등의 운영체제와 같이 Immutable하고, Container 기술을 사용하여 보안과 안정성을 확보하는 Linux 기반 운영체제를 개발합니다. 사용할 기술들 중 일부는:
 	- 안정성과 보안 향상: Containerization, Virtualization, Verified Boot, Data Encryption, Mandatory Access Control Compiler 기술 등
 	- 성능 향상: Compiler 기술, Clear linux/Liquorix kernel patch 등
 	- 개발자 환경: Git, Cloud, CI/CD, Open-Source 등
