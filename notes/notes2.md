@@ -9,39 +9,7 @@ sudo snap install lxd
 ```
 설정
 ```sh
-sudo lxd init --preseed <<- 'EOF'
-config:
-images.auto_update_interval: "0"
-networks:
-- config:
-	ipv4.address: auto
-	ipv6.address: auto
-description: ""
-name: lxdbr0
-type: ""
-project: default
-storage_pools:
-- config:
-	source: /var/lib/lxd/storage-pools/default
-description: ""
-name: default
-driver: btrfs
-profiles:
-- config: {}
-description: ""
-devices:
-	eth0:
-	name: eth0
-	network: lxdbr0
-	type: nic
-	root:
-	path: /
-	pool: default
-	type: disk
-name: default
-projects: []
-cluster: null
-EOF
+sudo lxd init
 
 sudo lxc config set \
 images.auto_update_cached=false
