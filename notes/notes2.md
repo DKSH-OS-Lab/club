@@ -98,6 +98,6 @@ sudo lxc delete --force ${NAME}
 	sudo dnf install -y git
 	uri="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
 	curl -LSf "${uri}" --tlsv1.3 | \
-		ZSH="${XDG_DATA_HOME:-\${HOME\}/.local/share}/oh-my-zsh" sh -s -- --unattended
+		sh -s -- --unattended
 	git config --global oh-my-zsh.hide-info 1
 	```
