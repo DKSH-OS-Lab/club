@@ -87,3 +87,17 @@ instance 삭제
 ```
 sudo lxc delete --force ${NAME}
 ```
+
+# terminal
+- zsh
+	```sh
+	sudo dnf install -y zsh util-linux-user
+	sudo chsh -s "$(which zsh)" fedora
+
+	# oh-my-zsh
+	sudo dnf install -y git
+	uri="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
+	curl -LSf "${uri}" --tlsv1.3 | \
+		ZSH="${XDG_DATA_HOME:-\${HOME\}/.local/share}/oh-my-zsh" sh -s -- --unattended
+	git config --global oh-my-zsh.hide-info 1
+	```
