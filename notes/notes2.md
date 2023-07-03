@@ -1,4 +1,5 @@
-# 설치
+# LXD
+## 설치
 [`snapd` 설치](https://snapcraft.io/docs/installing-snap-on-fedora)
 ```sh
 sudo dnf install -y snapd
@@ -10,7 +11,9 @@ sudo snap install lxd
 설정
 ```sh
 sudo lxd init
-
+```
+(모든 프롬프트에 대해 <kbd>⏎ Enter</kbd>를 눌러 기본 설정을 적용)
+```sh
 sudo lxc config set \
 images.auto_update_cached=false
 
@@ -19,7 +22,7 @@ boot.autostart=false \
 security.nesting=true \
 security.privileged=false
 ```
-# 사용
+## 사용
 리모트/이미지 탐색
 ```
 lxc remote list
@@ -56,16 +59,16 @@ instance 삭제
 sudo lxc delete --force ${NAME}
 ```
 
-# terminal
-- zsh
-	```sh
-	sudo dnf install -y zsh util-linux-user
-	sudo chsh -s "$(which zsh)" fedora
+# shell
+zsh
+```sh
+sudo dnf install -y zsh util-linux-user
+sudo chsh -s "$(which zsh)" fedora
 
-	# oh-my-zsh
-	sudo dnf install -y git
-	uri="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
-	curl -LSf "${uri}" --tlsv1.3 | \
-		sh -s -- --unattended
-	git config --global oh-my-zsh.hide-info 1
-	```
+# oh-my-zsh
+sudo dnf install -y git
+uri="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
+curl -LSf "${uri}" --tlsv1.3 | \
+	sh -s -- --unattended
+git config --global oh-my-zsh.hide-info 1
+```
