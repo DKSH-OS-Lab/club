@@ -63,7 +63,7 @@ sudo lxc delete --force ${NAME}
 zsh
 ```sh
 sudo dnf install -y zsh util-linux-user
-sudo chsh -s "$(which zsh)" fedora
+sudo chsh -s "$(which zsh)" "$(id -u -n)"
 
 # oh-my-zsh
 sudo dnf install -y git
