@@ -64,7 +64,7 @@ zsh
 ```sh
 sudo su - << END
 dnf install -y zsh util-linux-user git
-chsh -s "$(which zsh)" "$(id -u -n)"
+chsh -s '/usr/bin/zsh' "$(id -u -n)"
 END
 
 git config --global oh-my-zsh.hide-info 1
