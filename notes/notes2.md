@@ -62,13 +62,14 @@ sudo lxc delete --force ${NAME}
 # shell
 zsh
 ```sh
-sudo dnf install -y zsh util-linux-user
-sudo chsh -s "$(which zsh)" "$(id -u -n)"
+sudo su - << END
+dnf install -y zsh util-linux-user git
+chsh -s "$(which zsh)" "$(id -u -n)"
+END
 
-# oh-my-zsh
-sudo dnf install -y git
+git config --global oh-my-zsh.hide-info 1
+
 uri="https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh"
 curl -LSf "${uri}" --tlsv1.3 | \
 	sh -s -- --unattended
-git config --global oh-my-zsh.hide-info 1
 ```
