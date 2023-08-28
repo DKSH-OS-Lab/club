@@ -43,7 +43,7 @@ lxc console "${INSTANCE_NAME}"
 INSTANCE_NAME="t0"
 lxc init images:fedora/38/cloud "${INSTANCE_NAME}"
 lxc start "${INSTANCE_NAME}"
-lxc exec "${INSTANCE_NAME}" -- sh << END
+lxc exec "${INSTANCE_NAME}" -- sh << 'END'
 
 cat - > "/etc/systemd/system/slowstop.service" <<- 'EOF'
 [Service]
